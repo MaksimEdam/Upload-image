@@ -37,7 +37,7 @@ function App() {
         <input type="file" />
         <button type="submit">Upload</button>
       </form>
-      ; ;<h3>Загружен {progress}%</h3>
+      <h3>Загружен {progress}%</h3>
     </div>
   );
 }
