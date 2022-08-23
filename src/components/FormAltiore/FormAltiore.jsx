@@ -1,17 +1,9 @@
-import React, { useCallback } from "react";
-import { Form } from "@altiore/form";
-
-const FormAltiore = () => {
-  const handleSubmit = useCallback((values) => {
-    console.log("Переменные формы:", values);
-  }, []);
-
-  return (
-    <Form onSubmit={handleSubmit}>
-      <input type="file" name="name" />
-      <button type="submit">Отправить</button>
-    </Form>
-  );
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const file = e.target[0].files[0];
+  console.log("form.values is", file);
 };
-
-export default FormAltiore;
+<form onSubmit={handleSubmit}>
+  <input type="file" />
+  <button type="submit">Upload</button>
+</form>;
