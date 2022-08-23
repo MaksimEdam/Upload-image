@@ -1,5 +1,4 @@
 import React, { useCallback } from "react";
-
 import { Form } from "@altiore/form";
 
 const FormAltiore = () => {
