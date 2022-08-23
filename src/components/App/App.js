@@ -1,7 +1,4 @@
-//import FormAltiore from "../FormAltiore/FormAltiore";
-import React, { useCallback } from "react";
-
-import { Form } from "@altiore/form";
+import React from "react";
 import { storage } from "../Firebase/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
@@ -12,6 +9,7 @@ function App() {
     console.log("form.values is", file);
     uploadFiles(file);
   };
+
   const [progress, setProgress] = useState(0);
   const uploadFiles = (file) => {
     if (!file) return;
@@ -39,7 +37,7 @@ function App() {
         <input type="file" />
         <button type="submit">Upload</button>
       </form>
-      ;<h3>Загружен {progress}%</h3>
+      ; ;<h3>Загружен {progress}%</h3>
     </div>
   );
 }
