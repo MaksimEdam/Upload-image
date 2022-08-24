@@ -2,7 +2,7 @@ import { storage } from "../Firebase/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
 import MyForm from "../MyForm/MyForm";
-
+import s from "./App.module.css";
 const App = () => {
   const [progress, setProgress] = useState(0);
   const uploadFiles = (file) => {
@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div>
       <MyForm uploadFiles={uploadFiles} />
-      <h3>Загружен {progress}%</h3>
+      <h3 className={s.text}>Загружен {progress}%</h3>
     </div>
   );
 };
