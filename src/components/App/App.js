@@ -1,15 +1,9 @@
-import React from "react";
 import { storage } from "../Firebase/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
-function App() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const file = e.target[0].files[0];
-    console.log("form.values is", file);
-    uploadFiles(file);
-  };
+import MyForm from "../MyForm/MyForm";
 
+const App = () => {
   const [progress, setProgress] = useState(0);
   const uploadFiles = (file) => {
     if (!file) return;
@@ -31,15 +25,10 @@ function App() {
     );
   };
   return (
-    <div className="App">
-      <h1>Привет</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="file" />
-        <button type="submit">Upload</button>
-      </form>
+    <div>
+      <MyForm uploadFiles={uploadFiles} />
       <h3>Загружен {progress}%</h3>
     </div>
   );
-}
-
+};
 export default App;
