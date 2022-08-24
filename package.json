@@ -1,8 +1,8 @@
 {
-  "name": "Upload-image",
+  "name": "upload-image",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MaksimEdam.github.io/",
+  "homepage": "https://MaksimEdam.github.io/upload-image",
   "dependencies": {
     "@altiore/form": "^4.3.4",
     "@testing-library/jest-dom": "^5.15.1",
