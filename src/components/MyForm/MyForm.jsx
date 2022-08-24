@@ -11,7 +11,7 @@ const MyForm = ({ uploadFiles }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <input type="file" name="image" />
-      <button type="submit">Отправить</button>
+      <button type="submit">Загрузить</button>
     </Form>
   );
 };
