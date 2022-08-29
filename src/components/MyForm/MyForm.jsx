@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { Form } from "@altiore/form";
 import s from "./MyForm.module.css";
+import ButtonLoad from "../Button/ButtonLoad";
 
 const MyForm = ({ uploadFiles }) => {
   const handleSubmit = useCallback(
@@ -15,9 +16,7 @@ const MyForm = ({ uploadFiles }) => {
         <div className={s.inputWrapper}>
           <input type="file" name="image" className={s.modalFormInput} />
         </div>
-        <button type="submit" className={s.formButton}>
-          Загрузить
-        </button>
+        <ButtonLoad />
       </Form>
     </div>
   );
